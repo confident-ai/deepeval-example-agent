@@ -33,12 +33,19 @@ In Confident AI, wait a few minutes, send traffic once more, then go to
 **Failure Modes → Generate from traces**. Open one, click **Copy page**, paste
 it into your coding agent to fix Sunny, and send traffic again to compare.
 
-Optional: connect the [Confident AI MCP](https://www.confident-ai.com/docs/reference/mcp)
+## 4. Optional: connect the MCP and analyze
+
+Connect the [Confident AI MCP](https://www.confident-ai.com/docs/reference/mcp)
 so your coding agent can read your traces directly:
 
 ```bash
 claude mcp add --transport http confident-ai https://mcp.confident-ai.com/mcp
 ```
+
+Then ask your coding agent:
+
+> Use the Confident AI MCP to analyze Sunny's recent traces, group the failures
+> you find, and fix the worst ones in the agent.
 
 <details>
 <summary>Spoilers: what's wrong with Sunny?</summary>
